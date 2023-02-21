@@ -8,9 +8,8 @@ describe('FullVsPartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FullVsPartComponent ]
-    })
-    .compileComponents();
+      declarations: [FullVsPartComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FullVsPartComponent);
     component = fixture.componentInstance;
