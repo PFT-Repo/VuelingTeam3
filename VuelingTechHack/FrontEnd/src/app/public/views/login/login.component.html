@@ -31,7 +31,7 @@
       <input
         type="email"
         matInput
-        formControl="emailFormControl"
+        [formControl]="emailFormControl"
         placeholder="Ex. pat@example.com"
         required="true"
       />
@@ -54,7 +54,7 @@
         type="password"
         matInput
         (ngModel)="(user.password)"
-        formControl="passFormControl"
+        [formControl]="passFormControl"
         placeholder="123Vuel1ngLoPet4"
         required="true"
       />

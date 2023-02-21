@@ -2,31 +2,51 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
+export interface EmployeesByFunctionConfig {
+  title: string;
+  data: number[];
+  labels: string[];
+  datasetLabel: string;
+}
+
 @Component({
   selector: 'app-employees-by-function',
   templateUrl: './employees-by-function.component.html',
 })
 export class EmployeesByFunctionComponent implements OnInit {
-  @Input() data: any;
-  config: any;
+  @Input() config: EmployeesByFunctionConfig;
+  chartConfig: any;
+
+  constructor() {
+    this.config = {
+      data: [],
+      labels: [],
+      datasetLabel: 'Dataset',
+      title: 'Employees by Function',
+    };
+  }
 
   ngOnInit(): void {
-    this.config = {
-      type: 'bar',
+    this.chartConfig = {
+      type: 'doughnut',
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: this.config.labels,
         datasets: [
           {
-            label: 'Votes',
-            data: this.data,
-            borderWidth: 1,
+            label: this.config.datasetLabel,
+            data: this.config.data,
           },
         ],
       },
       options: {
-        scales: {
-          y: {
-            beginAtZero: true,
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: this.config.title,
           },
         },
       },

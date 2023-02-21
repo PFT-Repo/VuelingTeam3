@@ -1,13 +1,14 @@
+<div class="filters">
+  <app-chart-filter></app-chart-filter>
+</div>
+
 <div class="charts">
   <div class="charts_employees">
     <app-employees-by-function
-      [data]="employeesByFunction"
+      [config]="employeesByFunction"
     ></app-employees-by-function>
   </div>
 
   <div class="charts_employees">
-    <app-employees-by-function
-      [data]="[1, 2, 3, 4, 5, 6]"
-    ></app-employees-by-function>
   </div>
 </div>
