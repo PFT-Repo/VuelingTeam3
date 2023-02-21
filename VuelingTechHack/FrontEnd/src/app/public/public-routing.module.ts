@@ -8,11 +8,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   {
     path: '**',
-<<<<<<< HEAD
-    redirectTo: '/ueioiuio',
-=======
     redirectTo: '',
->>>>>>> main
     pathMatch: 'full',
   },
 ];
