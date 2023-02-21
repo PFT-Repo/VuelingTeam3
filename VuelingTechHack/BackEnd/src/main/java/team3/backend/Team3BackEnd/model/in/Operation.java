@@ -14,7 +14,6 @@ public class Operation {
     private String dt_flight;
     private int hour;
     private  int required_employees;
-
-    private HandlingFunction handlingFunction;
+    private HandlingFunction handling_function;
 
 }
