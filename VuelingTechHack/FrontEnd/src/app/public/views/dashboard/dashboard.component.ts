@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeesByFunctionConfig } from '../../components';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
-  employeesByFunction = [12, 19, 3, 5, 2, 3];
+  employeesByFunction: EmployeesByFunctionConfig = {
+    title: 'Empleados por función',
+    labels: ['Jardinera', 'Equipaje', 'Coordinación'],
+    data: [12, 25, 2],
+    datasetLabel: 'Total de Empleados',
+  };
 }
