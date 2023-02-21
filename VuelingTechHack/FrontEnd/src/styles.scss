@@ -1,1 +1,179 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$mat-blue-900: #002f56;
+$mat-blue-50: #e0f0fa;
+$mat-blue: (
+  50: #e0f0fa,
+  100: #b3d7f2,
+  200: #80bedb,
+  300: #4d9ec5,
+  400: #2685b5,
+  500: #0062a0,
+  600: #005a94,
+  700: #004d81,
+  800: #004373,
+  900: #002f56,
+  A100: #b3d7f2,
+  A200: #80bedb,
+  A400: #2685b5,
+  A700: #004d81,
+  contrast: (
+    50: $mat-blue-900,
+    100: $mat-blue-900,
+    200: $mat-blue-900,
+    300: $mat-blue-900,
+    400: $mat-blue-900,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: $mat-blue-900,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+$mat-light-blue-900: #006d87;
+$mat-light-blue: (
+  50: #e1f5fe,
+  100: #b3e5fc,
+  200: #81d4fa,
+  300: #4fc3f7,
+  400: #29b6f6,
+  500: #00aeef,
+  600: #00a5e5,
+  700: #0096c7,
+  800: #0087a9,
+  900: #006d87,
+  A100: #80d8ff,
+  A200: #40c4ff,
+  A400: #00b0ff,
+  A700: #0091ea,
+  contrast: (
+    50: $mat-light-blue-900,
+    100: $mat-light-blue-900,
+    200: $mat-light-blue-900,
+    300: $mat-light-blue-900,
+    400: $mat-light-blue-900,
+    500: $mat-blue-50,
+    600: $mat-blue-50,
+    700: $mat-blue-50,
+    800: $mat-blue-50,
+    900: $mat-blue-50,
+    A100: $mat-light-blue-900,
+    A200: $mat-light-blue-900,
+    A400: $mat-light-blue-900,
+    A700: $mat-light-blue-900,
+  ),
+);
+$mat-orange-900: #e65100;
+$mat-orange: (
+  50: #fff8e1,
+  100: #ffecb3,
+  200: #ffe082,
+  300: #ffd54f,
+  400: #ffca28,
+  500: #fcb712,
+  600: #f9b700,
+  700: #f2a400,
+  800: #eb8c00,
+  900: #e65100,
+  A100: #ffd180,
+  A200: #ffab40,
+  A400: #ff9100,
+  A700: #ff6d00,
+  contrast: (
+    50: $mat-orange-900,
+    100: $mat-orange-900,
+    200: $mat-orange-900,
+    300: $mat-orange-900,
+    400: $mat-orange-900,
+    500: $mat-blue-50,
+    600: $mat-blue-50,
+    700: $mat-blue-50,
+    800: $mat-blue-50,
+    900: $mat-blue-50,
+    A100: $mat-orange-900,
+    A200: $mat-orange-900,
+    A400: $mat-orange-900,
+    A700: $mat-orange-900,
+  ),
+);
+$mat-gray-900: #212121;
+$mat-gray: (
+  50: #fafafa,
+  100: #f5f5f5,
+  200: #eeeeee,
+  300: #e0e0e0,
+  400: #bdbdbd,
+  500: #9e9e9e,
+  600: #757575,
+  700: #616161,
+  800: #424242,
+  900: #212121,
+  A100: #d5d5d5,
+  A200: #aaaaaa,
+  A400: #303030,
+  A700: #616161,
+  contrast: (
+    50: $mat-gray-900,
+    100: $mat-gray-900,
+    200: $mat-gray-900,
+    300: $mat-gray-900,
+    400: $mat-gray-900,
+    500: $mat-blue-50,
+    600: $mat-blue-50,
+    700: $mat-blue-50,
+    800: $mat-blue-50,
+    900: #ffffff,
+    A100: $mat-gray-900,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$my-primary: mat.define-palette($mat-gray);
+$my-accent: mat.define-palette($mat-orange);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette($mat-blue);
+$my-info: mat.define-palette($mat-light-blue);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+      info: $my-info,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($my-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

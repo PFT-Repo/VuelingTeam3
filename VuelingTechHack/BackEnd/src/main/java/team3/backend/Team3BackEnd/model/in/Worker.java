@@ -13,9 +13,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @Document(collection = "workers")
 public class Worker {
-
+    private String id;
     private String name;
     private HandlingFunction handlingFunction;
     private WorkTime workTime;
+    private double FTsalary;
+    private double PTsalary;
 
 }

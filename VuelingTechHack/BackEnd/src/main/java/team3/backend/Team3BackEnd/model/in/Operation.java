@@ -12,5 +12,6 @@ import java.util.Date;
 @ToString
 @Document(collection = "Operation")
 public class Operation {
-    private Date
+    private Date date;
+
 }
