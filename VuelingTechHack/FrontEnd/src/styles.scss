@@ -9,7 +9,8 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-
+$mat-blue-900:#002f56;
+$mat-blue-50:#e0f0fa;
 $mat-blue: (
   50: #e0f0fa,
   100: #b3d7f2,
@@ -42,7 +43,7 @@ $mat-blue: (
     A700: #ffffff,
   )
 );
-
+$mat-light-blue-900:#006d87;
 $mat-light-blue: (
   50: #e1f5fe,
   100: #b3e5fc,
@@ -75,7 +76,7 @@ $mat-light-blue: (
     A700: $mat-light-blue-900,
   )
 );
-
+$mat-orange-900:#e65100;
 $mat-orange: (
   50: #fff8e1,
   100: #ffecb3,
@@ -108,7 +109,7 @@ $mat-orange: (
     A700: $mat-orange-900,
     )
 );
-
+$mat-gray-900:#212121;
 $mat-gray: (
 50: #fafafa,
 100: #f5f5f5,
@@ -142,12 +143,20 @@ A700: #ffffff,
 )
 );
 
+
+$my-primary: mat.define-palette($mat-gray);
+$my-accent: mat.define-palette($mat-orange);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette($mat-blue);
+$my-info: mat.define-palette($mat-light-blue);
+
 $my-theme: mat.define-light-theme((
  color: (
-   primary: $mat-gray,
-   accent: $mat-orange,
-   warn: $mat-blue,
-   info:$mat-light-blue,
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+   info:$my-info,
  ),
  typography: mat.define-typography-config(),
  density: 0,
