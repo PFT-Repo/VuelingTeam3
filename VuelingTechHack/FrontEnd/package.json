@@ -7,7 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "lint:fix": "ng lint --fix",
+    "format": "prettier --config .prettierrc --list-different \"src/**/*{.ts,.html,.scss}\"",
+    "format:fix": "prettier --config .prettierrc --write \"src/**/*{.ts,.html,.scss}\"",
+    "stubs": "stubby -s 1500 -l 127.0.0.1 -d stubbs/stubby.json -w",
+    "stubby": "concurrently \"npm run stubs\" \"npm start\""
   },
   "private": true,
   "dependencies": {
