@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicRoutingModule } from './public-routing.module';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent, DashboardComponent } from './views';
 import { MaterialModule } from './material.module';
 import {
   ChartComponent,
+  ChartFilterComponent,
   EmployeesByFunctionComponent,
   TableComponent,
 } from './components';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,13 +19,13 @@ import {
     TableComponent,
     DashboardComponent,
     EmployeesByFunctionComponent,
+    ChartFilterComponent,
   ],
   imports: [
     CommonModule,
     PublicRoutingModule,
     MaterialModule,
-    MatInputModule,
-    MatButtonModule,
+    ReactiveFormsModule,
   ],
 })
 export class PublicModule {}
