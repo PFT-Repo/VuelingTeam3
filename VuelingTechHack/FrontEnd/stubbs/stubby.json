@@ -1,7 +1,7 @@
 [
   {
     "request": {
-      "url": "^/products/list",
+      "url": "^/vueling/team3/getData",
       "method": "GET"
     },
     "response": {

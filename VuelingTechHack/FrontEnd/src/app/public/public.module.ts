@@ -10,7 +10,13 @@ import {
   TableComponent,
 } from './components';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {
+  DateAdapter,
+  MatNativeDateModule,
+  MAT_DATE_LOCALE,
+  NativeDateAdapter,
+} from '@angular/material/core';
+import { DataModule } from '@data/src/public-api';
 
 @NgModule({
   declarations: [
@@ -26,6 +32,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     PublicRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
+    MatNativeDateModule,
+    DataModule,
+  ],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+    { provide: DateAdapter, useClass: NativeDateAdapter },
   ],
 })
 export class PublicModule {}
