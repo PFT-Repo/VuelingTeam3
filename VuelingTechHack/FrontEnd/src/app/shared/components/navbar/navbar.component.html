@@ -2,14 +2,15 @@
   <mat-toolbar color="accent">
     <span>Vueling Ground Handling</span>
     <span class="example-spacer"></span>
-    <button
+    <button *ngIf="isLoggedIn"
       mat-icon-button
       class="example-icon dataset-icon"
       aria-label="Example icon-button with heart icon"
+      routerLink="/private/settings"
     >
-      <mat-icon>dataset</mat-icon>
+      <mat-icon>settings</mat-icon>
     </button>
-    <button
+    <button *ngIf="isLoggedIn"
       mat-icon-button
       class="example-icon"
       aria-label="Example icon-button with logout icon"

@@ -18,6 +18,7 @@ import {
   NativeDateAdapter,
 } from '@angular/material/core';
 import { DataModule } from '@data/src/public-api';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { DataModule } from '@data/src/public-api';
     ReactiveFormsModule,
     MatNativeDateModule,
     DataModule,
+    SharedModule,
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
