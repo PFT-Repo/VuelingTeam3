@@ -7,6 +7,13 @@ import { LoginComponent, DashboardComponent } from './views';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../libraries/material.module';
 
+import {
+  DateAdapter,
+  MatNativeDateModule,
+  MAT_DATE_LOCALE,
+  NativeDateAdapter,
+} from '@angular/material/core';
+import { DataModule } from '@data/src/public-api';
 
 @NgModule({
   declarations: [
@@ -18,6 +25,12 @@ import { MaterialModule } from '../libraries/material.module';
     PublicRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
+    MatNativeDateModule,
+    DataModule,
+  ],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+    { provide: DateAdapter, useClass: NativeDateAdapter },
   ],
 })
 export class PublicModule {}

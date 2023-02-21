@@ -2,38 +2,34 @@
   {
     "day": "product1",
     "hour": "12:00:01",
-    "handlingFunction": "Jardinera",
-    "fullTimeEmployers": "1",
-    "partTimeEmployeers": "3",
-    "totalEmployers": "5",
-    "fullTimeEmployersCost": "200",
-    "partTimeEmployeersCost": "600",
+    "handlingFuntion": "Jardinera",
+    "ftEmployees": "1",
+    "ptEmployees": "3",
+    "totalEmployees": "5",
+    "ftEmployeesCost": "200",
+    "ptEmployeesCost": "600",
     "totalCost": "1200"
-  
   },
   {
     "day": "product2",
     "hour": "12:00:01",
-    "handlingFunction": "Equipaje",
-    "fullTimeEmployers": "1",
-    "partTimeEmployeers": "3",
-    "totalEmployers": "5",
-    "fullTimeEmployersCost": "200",
-    "partTimeEmployeersCost": "600",
+    "handlingFuntion": "Equipaje",
+    "ftEmployees": "1",
+    "ptEmployees": "3",
+    "totalEmployees": "5",
+    "ftEmployeesCost": "200",
+    "ptEmployeesCost": "600",
     "totalCost": "1200"
-  
   },
   {
     "day": "product3",
     "hour": "12:00:01",
-    "handlingFunction": "Coordinación",
-    "fullTimeEmployers": "1",
-    "partTimeEmployeers": "3",
-    "totalEmployers": "5",
-    "fullTimeEmployersCost": "200",
-    "partTimeEmployeersCost": "600",
+    "handlingFuntion": "Coordinación",
+    "ftEmployees": "1",
+    "ptEmployees": "3",
+    "totalEmployees": "5",
+    "ftEmployeesCost": "200",
+    "ptEmployeesCost": "600",
     "totalCost": "1200"
   }
-
-
 ]

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { TestService } from 'projects/data/src/lib/services';
-import { ListOfFLights } from 'src/app/interfaces/listOfFlights.interface';
+import { Component, OnInit } from '@angular/core';
+import { ListOfFlights } from '@data/src/lib/models';
+import { DataService } from 'projects/data/src/lib/services';
 
 export interface PeriodicElement {
   name: string;
@@ -14,8 +14,8 @@ export interface PeriodicElement {
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
 })
-export class TableComponent {
-  constructor(private testSrv: TestService) {}
+export class TableComponent implements OnInit {
+  constructor(private testSrv: DataService) {}
 
   displayedColumns: string[] = [
     'day',
@@ -28,7 +28,7 @@ export class TableComponent {
     'partTimeEmployeersCost',
     'totalCost',
   ];
-  dataSource: ListOfFLights[] = [];
+  dataSource: ListOfFlights[] = [];
 
   ngOnInit(): void {
     this.testSrv.getListOfFlights().subscribe((res) => {
