@@ -1,7 +1,7 @@
 package team3.backend.Team3BackEnd.model.out;
 
 import java.time.LocalTime;
-import java.util.Date;
+//import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +14,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OperationDto {
 	
-	private Date day;
+	//private Date day;
+	private String date;
 	private LocalTime hour;
 	private String handlingFuntion;
 	private int ftEmployees;
