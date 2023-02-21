@@ -1,29 +1,78 @@
-<div class="wrapper" style="width: 100%; height: 100dvh;display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <form class="example-form morphic-form" style="width:auto ;margin-top: 2.5em; display: flex; flex-direction: column; padding: 2.5em;" >
-        <div style=" height: auto; padding: auto;"><img src="assets/logos/logo-vector-vueling-removebg-preview.png" width=" 100%"alt=""></div>
-        <mat-form-field class="example-full-width">
-          <mat-label>Email</mat-label>
-          <input type="email" matInput formControl="emailFormControl" placeholder="Ex. pat@example.com" required="true">
-          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>
-          <mat-error *ngIf="emailFormControl.hasError('required')">
-            Email is <strong>required</strong>
-          </mat-error>
-          </mat-form-field>
-      
-        <mat-form-field class="example-full-width">
-          <mat-label>Password</mat-label>
-          <input type="password" matInput (ngModel)="user.password" formControl="passFormControl" placeholder="123Vuel1ngLoPet4" required="true"/>
-          <mat-error *ngIf="passFormControl.hasError('password') && !passFormControl.hasError('required')">
-            Please enter a valid Password
-          </mat-error>
-          <mat-error *ngIf="passFormControl.hasError('required')">
-            Password is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
+<div
+  class="wrapper"
+  style="
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  "
+>
+  <form
+    class="example-form morphic-form"
+    style="
+      width: auto;
+      margin-top: 2.5em;
+      display: flex;
+      flex-direction: column;
+      padding: 2.5em;
+    "
+  >
+    <div style="height: auto; padding: auto">
+      <img
+        src="assets/logos/logo-vector-vueling-removebg-preview.png"
+        width=" 100%"
+        alt=""
+      />
+    </div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        formControl="emailFormControl"
+        placeholder="Ex. pat@example.com"
+        required="true"
+      />
+      <mat-error
+        *ngIf="
+          emailFormControl.hasError('email') &&
+          !emailFormControl.hasError('required')
+        "
+      >
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
 
-         
-    <button type="submit" mat-flat-button color="accent" (click)="validate()">Sign-In</button>
-      </form>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input
+        type="password"
+        matInput
+        (ngModel)="(user.password)"
+        formControl="passFormControl"
+        placeholder="123Vuel1ngLoPet4"
+        required="true"
+      />
+      <mat-error
+        *ngIf="
+          passFormControl.hasError('password') &&
+          !passFormControl.hasError('required')
+        "
+      >
+        Please enter a valid Password
+      </mat-error>
+      <mat-error *ngIf="passFormControl.hasError('required')">
+        Password is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-flat-button color="accent" (click)="validate()">
+      Sign-In
+    </button>
+  </form>
 </div>
