@@ -7,7 +7,8 @@ import {
 } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { AuthService } from '../../../services/auth.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { filter } from 'rxjs';
 /* Error when invalid control is dirty, touched, or submitted. */
 
 @Component({
@@ -24,6 +25,7 @@ export class LoginComponent {
     email: '',
     password: '',
   };
+  activatedRoute: ActivatedRoute | null | undefined;
   constructor(private auth:AuthService,private rou:Router){}
   emailFormControl = new FormControl('', [
     Validators.required,
@@ -42,11 +44,14 @@ export class LoginComponent {
       res => {
         let y:string | any= Object.values(res);
         localStorage.setItem('token', y);
-     this.rou.navigate(['/dashboard']);
+        try {
+          alert( this.rou.navigate(['public/','dashboard'], {relativeTo: this.activatedRoute}).catch((err)=> alert(err))
+          )
+        } catch (error) {
+          
+        }
       },err=>console.log(err)
     )
-    alert(user.email + '  ' +user.password);
-
   }
   validate(): void {
     let email = <HTMLInputElement> document.getElementById('email');
@@ -61,7 +66,6 @@ export class LoginComponent {
             email:email.value,
             password:password.value
           }
-          alert(user.email + '  ' +user.password);
           this.submit(user);
         }
       }

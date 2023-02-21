@@ -4,8 +4,17 @@ const router = Router();
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 
+/*Get*/
+router.get('/dummyData', async(req,res)=>{
+var csv = require('csvtojson');
+
+csv().fromFile('src/files/dummy.csv').then(function(jsonArrayObj){
+    res.status(200).json({jsonArrayObj});
+})
+})
+
 /*Post*/
-router.post('/signup', async(req, res) => {
+router.post('/register', async(req, res) => {
     const { email, password } = req.body;
     const newUser = new User({ email, password });
     newUser.save();
@@ -14,7 +23,7 @@ router.post('/signup', async(req, res) => {
     });
     res.status(200).json({ token });
 });
-router.post('/signin', async(req, res) => {
+router.post('/login', async(req, res) => {
     const { email, password } = req.body;
     User.findOne({ email }, (err, user) => {
         if (err) {

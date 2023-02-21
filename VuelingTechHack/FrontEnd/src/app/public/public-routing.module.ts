@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   {
     path: '**',
-    redirectTo: '/',
+    redirectTo: '/ueioiuio',
     pathMatch: 'full',
   },
 ];
