@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
-  imports: [
-    HttpClientModule
-  ],
+  imports: [HttpClientModule],
   exports: [],
 })
 export class DataModule {}
