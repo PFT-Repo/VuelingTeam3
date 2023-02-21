@@ -1,10 +1,39 @@
 [
   {
-    "name": "product1",
-    "price": 25
+    "day": "product1",
+    "hour": "12:00:01",
+    "handlingFunction": "Jardinera",
+    "fullTimeEmployers": "1",
+    "partTimeEmployeers": "3",
+    "totalEmployers": "5",
+    "fullTimeEmployersCost": "200",
+    "partTimeEmployeersCost": "600",
+    "totalCost": "1200"
+  
   },
   {
-    "name": "product2",
-    "price": 20
+    "day": "product2",
+    "hour": "12:00:01",
+    "handlingFunction": "Equipaje",
+    "fullTimeEmployers": "1",
+    "partTimeEmployeers": "3",
+    "totalEmployers": "5",
+    "fullTimeEmployersCost": "200",
+    "partTimeEmployeersCost": "600",
+    "totalCost": "1200"
+  
+  },
+  {
+    "day": "product3",
+    "hour": "12:00:01",
+    "handlingFunction": "Coordinación",
+    "fullTimeEmployers": "1",
+    "partTimeEmployeers": "3",
+    "totalEmployers": "5",
+    "fullTimeEmployersCost": "200",
+    "partTimeEmployeersCost": "600",
+    "totalCost": "1200"
   }
+
+
 ]

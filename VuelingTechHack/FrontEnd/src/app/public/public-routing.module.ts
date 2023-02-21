@@ -4,6 +4,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
+
   { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   {
