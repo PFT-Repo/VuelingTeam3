@@ -6,14 +6,11 @@ import {MatInputModule} from '@angular/material/input'
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
 
+import { LoginComponent, DashboardComponent } from './views';
+import { MaterialModule } from './material.module';
+
 @NgModule({
-  declarations: [
-    LoginComponent
-  ],
-  imports: [CommonModule, PublicRoutingModule,MatInputModule,MatButtonModule]
-  , 
-  providers: [
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
-  ]
+  declarations: [LoginComponent, DashboardComponent],
+  imports: [CommonModule, PublicRoutingModule, MaterialModule,MatInputModule,MatButtonModule],
 })
 export class PublicModule {}

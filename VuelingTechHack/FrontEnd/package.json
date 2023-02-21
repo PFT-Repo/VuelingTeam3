@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "format": "prettier --config .prettierrc --list-different \"src/**/*{.ts,.html,.scss}\"",
-    "format:fix": "prettier --config .prettierrc --write \"src/**/*{.ts,.html,.scss}\"",
+    "format": "prettier --config .prettierrc --list-different \"(src|projects)/**/*{.ts,.html,.scss}\"",
+    "format:fix": "prettier --config .prettierrc --write \"(src|projects)/**/*{.ts,.html,.scss}\"",
     "stubs": "stubby -s 1500 -l 127.0.0.1 -d stubbs/stubby.json -w",
     "stubby": "concurrently \"npm run stubs\" \"npm start\""
   },
@@ -52,6 +52,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^15.0.0",
     "prettier": "^2.8.4",
     "prettier-eslint": "^15.0.1",
     "stubby": "^5.1.0",

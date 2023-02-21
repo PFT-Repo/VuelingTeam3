@@ -6,7 +6,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
   emailError:boolean= false;
@@ -37,5 +37,4 @@ export class LoginComponent {
     }
     alert('Algo salió mal');
   }
-
 }
