@@ -1,15 +1,8 @@
-import { Component } from '@angular/core';
-import {
-  FormControl,
-  FormGroupDirective,
-  NgForm,
-  Validators,
-} from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
-import { AuthService } from '../../../services/auth.service';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { filter } from 'rxjs';
-/* Error when invalid control is dirty, touched, or submitted. */
+import { LoginResponse } from '@data/src/lib/models';
+import { AuthService } from '@data/src/lib/services';
 
 @Component({
   selector: 'app-login',

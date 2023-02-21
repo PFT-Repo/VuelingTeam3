@@ -1,80 +1,50 @@
-<div
-  class="wrapper"
-  style="
-    width: 100%;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  "
->
-  <form
-    class="example-form morphic-form"
-    style="
-      width: auto;
-      margin-top: 2.5em;
-      display: flex;
-      flex-direction: column;
-      padding: 2.5em;
-    "
-  >
-    <div style="height: auto; padding: auto">
-      <img
-        src="assets/logos/logo-vector-vueling-removebg-preview.png"
-        width=" 100%"
-        alt=""
-      />
+<div class="wrapper">
+  <form class="morphic-form" [formGroup]="loginGroup">
+    <div class="logo">
+      <img src="assets/logos/logo-vector-vueling-removebg-preview.png" alt="" />
     </div>
-    <mat-form-field class="example-full-width">
-      <mat-label>Email</mat-label>
+
+    <mat-form-field>
+      <mat-label>Correo</mat-label>
       <input
-      id="email"
         type="email"
         matInput
-        [formControl]="emailFormControl"
-        placeholder="Ex. pat@example.com"
+        formControlName="email"
+        placeholder="Ejemplo pat@example.com"
         required="true"
       />
-      <mat-error
-        *ngIf="
-          emailFormControl.hasError('email') &&
-          !emailFormControl.hasError('required')
-        "
-      >
-        Please enter a valid email address
+
+      <mat-error *ngIf="loginGroup.get('email')?.hasError('required'); else emailError">
+        El correo es <strong>requerido</strong>
       </mat-error>
-      <mat-error *ngIf="emailFormControl.hasError('required')">
-        Email is <strong>required</strong>
-      </mat-error>
+
+      <ng-template #emailError>
+        <mat-error *ngIf="loginGroup.get('email')?.hasError('email')">
+          Por favor entre una dirección de correo válida
+        </mat-error>
+      </ng-template>
     </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-      <mat-label>Password</mat-label>
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
       <input
-      id="password"
         type="password"
         matInput
-        (ngModel)="(user.password)"
-        [formControl]="passFormControl"
-        placeholder="123Vuel1ngLoPet4"
+        formControlName="password"
         required="true"
       />
-      <mat-error
-        *ngIf="
-          passFormControl.hasError('password') &&
-          !passFormControl.hasError('required')
-        "
-      >
-        Please enter a valid Password
+
+      <mat-error *ngIf="loginGroup.get('password')?.hasError('required'); else passwordError">
+        La contraseña es <strong>requerida</strong>
       </mat-error>
-      <mat-error *ngIf="passFormControl.hasError('required')">
-        Password is <strong>required</strong>
-      </mat-error>
+
+      <ng-template #passwordError>
+        <mat-error *ngIf="loginGroup.get('password')?.hasError('password')">
+          Por favor entre una contraseña válida
+        </mat-error>
+      </ng-template>
     </mat-form-field>
 
-    <button type="submit" mat-flat-button color="accent" (click)="validate()">
-      Sign-In
-    </button>
+    <button type="button" mat-flat-button color="accent" (click)="submit()">Entrar</button>
   </form>
 </div>

@@ -3,11 +3,15 @@
 </div>
 
 <div class="charts">
-  <div class="charts_employees">
-    <app-employees-by-function *ngIf="employeesByFunction$ | async as config"
-      [config]="config"
-    ></app-employees-by-function>
+  <div class="charts_employees" *ngIf="employeesByFunction$ | async as config">
+    <app-employees-by-function [config]="config"></app-employees-by-function>
   </div>
 
-  <div class="charts_employees"></div>
+  <div class="charts_full-vs-part" *ngIf="fullVsPart$ | async as config">
+    <app-full-vs-part [config]="config"></app-full-vs-part>
+  </div>
+</div>
+
+<div class="table">
+  <app-table></app-table>
 </div>
