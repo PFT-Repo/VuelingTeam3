@@ -22,7 +22,6 @@ export class LoginComponent {
 
   submit(user: any){
       console.log(user);
-         
   }
   validate():void{
     if(this.user.email != "" && this.user.password != ""){
