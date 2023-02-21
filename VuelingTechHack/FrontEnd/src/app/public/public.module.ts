@@ -11,6 +11,7 @@ import {
   TableComponent,
 } from './components';
 
+
 @NgModule({
   declarations: [
     LoginComponent,
