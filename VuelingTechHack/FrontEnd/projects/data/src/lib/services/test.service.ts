@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'environments/environment';
-import { ListOfFLights } from 'src/app/interfaces/listOfFlights.interface';
+import { ListFlights } from 'src/app/interfaces/listOfFlights.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ export class TestService {
   ) {}
 
   getListOfFlights(){
-    return this.http.get<ListOfFLights[]>(environment.apiUrl)
+    return this.http.get<ListFlights[]>(environment.apiUrl)
   }
 
   

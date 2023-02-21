@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TestService } from 'projects/data/src/lib/services';
-import { ListOfFLights } from 'src/app/interfaces/listOfFlights.interface';
+import { ListFlights, ListOfFLights } from 'src/app/interfaces/listOfFlights.interface';
 
 export interface PeriodicElement {
   name: string;
@@ -18,17 +18,17 @@ export class TableComponent {
   constructor(private testSrv: TestService) {}
 
   displayedColumns: string[] = [
-    'day',
-    'hour',
-    'handlingFunction',
-    'fullTimeEmployers',
-    'partTimeEmployeers',
-    'totalEmployers',
-    'fullTimeEmployersCost',
-    'partTimeEmployeersCost',
-    'totalCost',
+    'dt_flight',
+    'cd_flight_number',
+    'cd_airport_dep',
+    'cd_airport_arr',
+    'handling_function',
+    'ts_operation_start',
+    'ts_operation_end',
+    'required_employees',
   ];
-  dataSource: ListOfFLights[] = [];
+
+  dataSource: ListFlights[] = [];
 
   ngOnInit(): void {
     this.testSrv.getListOfFlights().subscribe((res) => {
@@ -36,4 +36,5 @@ export class TableComponent {
       console.log(res);
     });
   }
+  
 }

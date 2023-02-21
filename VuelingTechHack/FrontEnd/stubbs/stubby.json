@@ -6,7 +6,7 @@
     },
     "response": {
       "status": 200,
-      "file": "./products/list.json"
+      "file": "./products/csvjson.json"
     }
   }
 ]
