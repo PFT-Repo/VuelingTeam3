@@ -8,5 +8,15 @@
       "status": 200,
       "file": "./products/list.json"
     }
+  },
+  {
+    "request": {
+      "url": "^/api/auth/login",
+      "method": "POST"
+    },
+    "response": {
+      "status": 200,
+      "file": "./auth/login.json"
+    }
   }
 ]
