@@ -18,11 +18,11 @@ import team3.backend.Team3BackEnd.repository.UserRepository;
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
-    private final UserRepository playerRepo;
+    private final UserRepository userRepository;
 //comprobem que un usuari existeix a la BD
     @Bean
     public UserDetailsService userDetailsService() {
-        return username -> playerRepo.findByEmail(username)
+        return username -> userRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 //marca d'on s'extru la informació i el tipus de codificació de les contrasenyes a la BD

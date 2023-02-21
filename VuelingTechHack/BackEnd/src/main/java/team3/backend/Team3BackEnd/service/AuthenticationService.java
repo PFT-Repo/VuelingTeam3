@@ -2,6 +2,7 @@ package team3.backend.Team3BackEnd.service;
 
 
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,6 +23,8 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     public AuthenticationResponse register(RegisterDto request) {
+        if (EmailValidator.getInstance().isValid(request.getEmail())) {
+            if (!repository.existsByEmail(request.getEmail())){
                 var user = User.builder()
                         .name(request.getName())
                         .email(request.getEmail())
@@ -33,6 +36,9 @@ public class AuthenticationService {
                 return AuthenticationResponse.builder()
                         .token(jwtToken)
                         .build();
+            }
+        }
+        return null;
 
     }
     public AuthenticationResponse authenticate(LoginDto request) {

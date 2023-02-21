@@ -22,7 +22,11 @@ public class AuthController {
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterDto request
     ) {
-            return ResponseEntity.ok(service.register(request));
+           if (service.register(request) != null){
+               return new  ResponseEntity<>(service.register(request), HttpStatus.OK);
+           } else {
+                return new  ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+           }
 
     }
 
