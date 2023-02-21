@@ -9,9 +9,11 @@ import UIKit
 internal final class DetailViewController: UIViewController {
     // MARK: Outlets
 
-    @IBOutlet weak var lblNameCharacter: UILabel!
-    @IBOutlet weak var lblExtraInfoCharacter: UILabel!
+    @IBOutlet weak var lblHour: UILabel!
+    @IBOutlet var lblNameCharacter: UILabel!
+    @IBOutlet var lblExtraInfoCharacter: UILabel!
     @IBOutlet var lblSecondInfo: UILabel!
+    @IBOutlet var lblTotalCost: UILabel!
 
     // MARK: Variables
 
@@ -28,17 +30,15 @@ internal final class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tabBarController?.tabBar.isHidden = true
         presenter?.viewDidLoadWasCalled()
     }
 }
 
 extension DetailViewController: DetailPresenterViewProtocol {
     func loadInfo(RMCharacter: RMCharacterAPIProtocol) {
-        lblNameCharacter.text = RMCharacter.species
-
-        lblExtraInfoCharacter.text = RMCharacter.type
-
-        lblSecondInfo.text = RMCharacter.created
+        lblHour.text = String(RMCharacter.characterId)
+        lblExtraInfoCharacter.text = String(RMCharacter.characterId * 2)
+        lblTotalCost.text = "1200"
     }
 }

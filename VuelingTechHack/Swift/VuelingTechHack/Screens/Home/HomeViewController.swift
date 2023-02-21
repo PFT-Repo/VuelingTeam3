@@ -39,6 +39,11 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
         presenter?.viewDidLoadWasCalled()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+
     // MARK: Table view Functions
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +57,7 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
 
         guard let HomeAtIndex = presenter?.rmCharacterAtIndex(index: indexPath.row) else { return cell }
 
-        cell.lblName.text = HomeAtIndex.name
+        cell.lblName.text = HomeAtIndex.created
 
         return cell
     }
