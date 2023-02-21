@@ -6,6 +6,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { AuthService } from '../../../services/auth.service';
+import { Router } from '@angular/router';
 /* Error when invalid control is dirty, touched, or submitted. */
 
 @Component({
@@ -22,6 +24,7 @@ export class LoginComponent {
     email: '',
     password: '',
   };
+  constructor(private auth:AuthService,private rou:Router){}
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -31,20 +34,40 @@ export class LoginComponent {
     Validators.pattern(this.valPass),
   ]);
 
-  submit(user: any) {
-    console.log(user);
+  submit(user: { email: string; password: string; }) {
+    
+
+    
+    this.auth.signIn(user).subscribe(
+      res => {
+        let y:string | any= Object.values(res);
+        localStorage.setItem('token', y);
+     this.rou.navigate(['/dashboard']);
+      },err=>console.log(err)
+    )
+    alert(user.email + '  ' +user.password);
+
   }
   validate(): void {
-    if (this.user.email != '' && this.user.password != '') {
+    let email = <HTMLInputElement> document.getElementById('email');
+    let password = <HTMLInputElement> document.getElementById('password');
+    if (email.value != '' && password.value != '') {
       console.log('Email y pass no están vacios');
-      if (this.valMail.test(this.user.email)) {
+      if (this.valMail.test(email.value)) {
         console.log('pasó el test de mail');
-        if (this.valPass.test(this.user.password)) {
+        if (this.valPass.test(password.value)) {
           console.log('Pasaron los examenes de formateo en front');
-          this.submit(this.user);
+          let user = {
+            email:email.value,
+            password:password.value
+          }
+          alert(user.email + '  ' +user.password);
+          this.submit(user);
         }
       }
     }
-    alert('Algo salió mal');
+    else{
+      alert('Algo salió mal');
+    }
   }
 }

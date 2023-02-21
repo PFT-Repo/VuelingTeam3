@@ -29,6 +29,7 @@
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
       <input
+      id="email"
         type="email"
         matInput
         [formControl]="emailFormControl"
@@ -51,6 +52,7 @@
     <mat-form-field class="example-full-width">
       <mat-label>Password</mat-label>
       <input
+      id="password"
         type="password"
         matInput
         (ngModel)="(user.password)"
