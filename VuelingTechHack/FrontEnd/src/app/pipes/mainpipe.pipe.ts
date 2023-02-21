@@ -1,12 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'mainpipe'
+  name: 'mainpipe',
 })
 export class MainpipePipe implements PipeTransform {
-
-  transform(value: unknown, ...args: unknown[]): unknown {
+  transform(): unknown {
     return null;
   }
-
 }

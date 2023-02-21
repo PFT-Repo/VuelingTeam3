@@ -6,15 +6,9 @@ import { AppComponent } from './app.component';
 import { MainpipePipe } from './pipes/mainpipe.pipe';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainpipePipe
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, MainpipePipe],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
