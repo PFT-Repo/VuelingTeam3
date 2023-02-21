@@ -1,9 +1,15 @@
 .charts {
   display: flex;
+}
 
-  .charts_employees {
-    flex: 1 1 auto;
-    width: calc(50% - 25px);
-    margin: 25px;
-  }
+.charts_employees {
+  flex: 1 1 auto;
+  width: calc(35% - 25px);
+  margin: 25px;
+}
+
+.charts_full-vs-part {
+  flex: 1 1 auto;
+  width: calc(65% - 25px);
+  margin: 25px;
 }
