@@ -8,5 +8,4 @@ export interface ListOfFLights {
   fullTimeEmployersCost: string,
   partTimeEmployeersCost: string,
   totalCost: string,
-  
 }

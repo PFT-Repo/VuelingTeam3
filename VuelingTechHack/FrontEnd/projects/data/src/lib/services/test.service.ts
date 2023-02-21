@@ -12,7 +12,7 @@ export class TestService {
   ) {}
 
   getListOfFlights(){
-    return this.http.get<ListOfFLights>(environment.apiUrl)
+    return this.http.get<ListOfFLights[]>(environment.apiUrl)
   }
 
   
