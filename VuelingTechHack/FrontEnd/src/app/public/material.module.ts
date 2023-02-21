@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button'
 
 const MATERIAL_MODULES = [MatInputModule,MatButtonModule];
 
