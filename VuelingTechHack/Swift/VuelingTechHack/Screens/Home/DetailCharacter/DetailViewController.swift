@@ -11,7 +11,7 @@ internal final class DetailViewController: UIViewController {
 
     @IBOutlet weak var lblNameCharacter: UILabel!
     @IBOutlet weak var lblExtraInfoCharacter: UILabel!
-    
+    @IBOutlet var lblSecondInfo: UILabel!
 
     // MARK: Variables
 
@@ -35,8 +35,10 @@ internal final class DetailViewController: UIViewController {
 
 extension DetailViewController: DetailPresenterViewProtocol {
     func loadInfo(RMCharacter: RMCharacterAPIProtocol) {
-        lblNameCharacter.text = RMCharacter.name
+        lblNameCharacter.text = RMCharacter.species
 
-        lblExtraInfoCharacter.text = RMCharacter.name
+        lblExtraInfoCharacter.text = RMCharacter.type
+
+        lblSecondInfo.text = RMCharacter.created
     }
 }

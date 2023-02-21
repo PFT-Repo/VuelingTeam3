@@ -57,4 +57,19 @@ class AppCoordinator: Coordinator {
 
         return navigatorController
     }
+
+//    func getLoginView() -> UINavigationController {
+//        let navigatorController = UINavigationController()
+//        let coordinator = LoginCoordinator()
+//        let interactor = LoginInteractor()
+//        let presenter = LoginPresenter(interactor: interactor)
+//        let view = LoginViewController(presenter: presenter)
+//
+//        view.delegate = coordinator
+//        presenter.view = view
+//
+//        navigatorController.setViewControllers([view], animated: true)
+//
+//        return navigatorController
+//    }
 }

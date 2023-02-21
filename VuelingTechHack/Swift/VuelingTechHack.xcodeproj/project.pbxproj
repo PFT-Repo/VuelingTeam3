@@ -40,6 +40,12 @@
 		73F848CC29A4F0D7008C2964 /* RMCharacterAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F848C029A4F0D7008C2964 /* RMCharacterAPIProtocol.swift */; };
 		73F848CD29A4F0D7008C2964 /* RMInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F848C129A4F0D7008C2964 /* RMInfoProtocol.swift */; };
 		73F848CE29A4F0D7008C2964 /* RMCharacterServiceAPIContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F848C329A4F0D7008C2964 /* RMCharacterServiceAPIContract.swift */; };
+		73F848D229A51460008C2964 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F848D129A51460008C2964 /* LoginCoordinator.swift */; };
+		73F848D429A5146F008C2964 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F848D329A5146F008C2964 /* LoginViewController.swift */; };
+		73F848D629A5148F008C2964 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F848D529A5148F008C2964 /* LoginPresenter.swift */; };
+		73F848D829A514A1008C2964 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F848D729A514A1008C2964 /* LoginInteractor.swift */; };
+		73F848DA29A514B7008C2964 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F848D929A514B7008C2964 /* LoginViewController.xib */; };
+		73F848DC29A51970008C2964 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F848DB29A51970008C2964 /* LoginContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +84,12 @@
 		73F848C029A4F0D7008C2964 /* RMCharacterAPIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCharacterAPIProtocol.swift; sourceTree = "<group>"; };
 		73F848C129A4F0D7008C2964 /* RMInfoProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMInfoProtocol.swift; sourceTree = "<group>"; };
 		73F848C329A4F0D7008C2964 /* RMCharacterServiceAPIContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCharacterServiceAPIContract.swift; sourceTree = "<group>"; };
+		73F848D129A51460008C2964 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		73F848D329A5146F008C2964 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		73F848D529A5148F008C2964 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		73F848D729A514A1008C2964 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		73F848D929A514B7008C2964 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		73F848DB29A51970008C2964 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,7 @@
 		73F8487C29A4CCA1008C2964 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				73F848D029A5130D008C2964 /* Login */,
 				73F8487D29A4CCC5008C2964 /* Home */,
 			);
 			path = Screens;
@@ -300,6 +313,19 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		73F848D029A5130D008C2964 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				73F848D129A51460008C2964 /* LoginCoordinator.swift */,
+				73F848D329A5146F008C2964 /* LoginViewController.swift */,
+				73F848D529A5148F008C2964 /* LoginPresenter.swift */,
+				73F848D729A514A1008C2964 /* LoginInteractor.swift */,
+				73F848D929A514B7008C2964 /* LoginViewController.xib */,
+				73F848DB29A51970008C2964 /* LoginContract.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,6 +386,7 @@
 			files = (
 				73F8487529A4CBAC008C2964 /* LaunchScreen.storyboard in Resources */,
 				73F848AB29A4E816008C2964 /* HomeCustomCell.xib in Resources */,
+				73F848DA29A514B7008C2964 /* LoginViewController.xib in Resources */,
 				73F848AD29A4E817008C2964 /* DetailViewController.xib in Resources */,
 				73F8488929A4CDDE008C2964 /* HomeView.xib in Resources */,
 				73F8487229A4CBAC008C2964 /* Assets.xcassets in Resources */,
@@ -377,6 +404,7 @@
 				73F848CD29A4F0D7008C2964 /* RMInfoProtocol.swift in Sources */,
 				73F848AC29A4E816008C2964 /* DetailPresenter.swift in Sources */,
 				73F8488129A4CD30008C2964 /* HomeViewController.swift in Sources */,
+				73F848D829A514A1008C2964 /* LoginInteractor.swift in Sources */,
 				73F848C629A4F0D7008C2964 /* RMInfoAPI.swift in Sources */,
 				73F848C729A4F0D7008C2964 /* RMCharacterAPI.swift in Sources */,
 				73F8489C29A4DF84008C2964 /* Coordinator.swift in Sources */,
@@ -385,14 +413,18 @@
 				73F848CB29A4F0D7008C2964 /* RMResultCharacterProtocol.swift in Sources */,
 				73F8487F29A4CD1E008C2964 /* HomeCoordinator.swift in Sources */,
 				73F8488329A4CD46008C2964 /* HomePresenter.swift in Sources */,
+				73F848DC29A51970008C2964 /* LoginContract.swift in Sources */,
 				73F8488729A4CD6A008C2964 /* HomeContract.swift in Sources */,
 				73F8486929A4CBAB008C2964 /* AppDelegate.swift in Sources */,
 				73F8488E29A4DD7D008C2964 /* BaseContract.swift in Sources */,
 				73F848CC29A4F0D7008C2964 /* RMCharacterAPIProtocol.swift in Sources */,
 				73F848C829A4F0D7008C2964 /* ServiceAPI.swift in Sources */,
+				73F848D429A5146F008C2964 /* LoginViewController.swift in Sources */,
+				73F848D629A5148F008C2964 /* LoginPresenter.swift in Sources */,
 				73F8489229A4DDA4008C2964 /* AlertCustom.swift in Sources */,
 				73F848CE29A4F0D7008C2964 /* RMCharacterServiceAPIContract.swift in Sources */,
 				73F8489029A4DD96008C2964 /* CustomError.swift in Sources */,
+				73F848D229A51460008C2964 /* LoginCoordinator.swift in Sources */,
 				73F8488B29A4DCCC008C2964 /* HomeServiceAPIProtocol.swift in Sources */,
 				73F848C429A4F0D7008C2964 /* RMOriginAPI.swift in Sources */,
 				73F8486B29A4CBAB008C2964 /* SceneDelegate.swift in Sources */,

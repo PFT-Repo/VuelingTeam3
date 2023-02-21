@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="lblExtraInfoCharacter" destination="cre-fq-NUb" id="tTB-We-bfc"/>
                 <outlet property="lblNameCharacter" destination="s4b-el-78r" id="Aq4-s0-eGe"/>
+                <outlet property="lblSecondInfo" destination="moR-iH-Y5D" id="2QW-5a-y2A"/>
                 <outlet property="view" destination="edL-Q4-iT6" id="Byq-C2-3Uq"/>
             </connections>
         </placeholder>
@@ -32,6 +33,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moR-iH-Y5D">
+                    <rect key="frame" x="87" y="464" width="218" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="aqF-Ht-NIw"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,7 +49,7 @@
                 <constraint firstItem="s4b-el-78r" firstAttribute="centerX" secondItem="edL-Q4-iT6" secondAttribute="centerX" id="bHz-qz-L1U"/>
                 <constraint firstItem="s4b-el-78r" firstAttribute="top" secondItem="aqF-Ht-NIw" secondAttribute="top" constant="100" id="zBq-Po-hk4"/>
             </constraints>
-            <point key="canvasLocation" x="47" y="21"/>
+            <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>

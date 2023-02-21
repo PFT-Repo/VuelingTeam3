@@ -14,12 +14,8 @@ class HomeCoordinator: HomeCoordinatorDelegate {
         let presenter = DetailPresenter(interactor: interactor)
         let view = DetailViewController(presenter: presenter)
 
-//        let interactor = DetailInteractor(person: person)
-//        let presenter = DetailPresenter(interactor: interactor)
-//        let view = DetailViewController(presenter: presenter)
-
         presenter.view = view
-//
+
         sender.navigationController?.show(view, sender: nil)
     }
 }
