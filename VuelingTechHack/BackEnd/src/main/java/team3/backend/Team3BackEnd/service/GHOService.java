@@ -28,7 +28,7 @@ public class GHOService{
 		List<Operation> operationList = repoOperation.findAll();
 		List<OperationDto> operationDTO=new ArrayList<OperationDto>();
 
-		return operationList.stream().filter(operation -> operation.getDt_flight().equals(date)&&operation.getHandlingFunction().toString().equals(handlingFuntion)).collect(Collectors.toList());
+		return operationList.stream().filter(operation -> operation.getDt_flight().equals(date)&&operation.getHandling_function().toString().equals(handlingFuntion)).collect(Collectors.toList());
 
 
 	}
