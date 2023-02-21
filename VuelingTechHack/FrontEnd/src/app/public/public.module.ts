@@ -7,6 +7,7 @@ import {
   ChartComponent,
   ChartFilterComponent,
   EmployeesByFunctionComponent,
+  FullVsPartComponent,
   TableComponent,
 } from './components';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -26,6 +27,7 @@ import { DataModule } from '@data/src/public-api';
     DashboardComponent,
     EmployeesByFunctionComponent,
     ChartFilterComponent,
+    FullVsPartComponent,
   ],
   imports: [
     CommonModule,
