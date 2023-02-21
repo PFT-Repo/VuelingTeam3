@@ -1,21 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ListOfFlights } from '@data/src/lib/models';
-import { DataService } from 'projects/data/src/lib/services';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
 })
-export class TableComponent implements OnInit {
-  constructor(private testSrv: DataService) {}
+export class TableComponent {
+  @Input() dataSource: ListOfFlights[] = [];
 
   displayedColumns: string[] = [
     'day',
@@ -28,12 +20,4 @@ export class TableComponent implements OnInit {
     'partTimeEmployeersCost',
     'totalCost',
   ];
-  dataSource: ListOfFlights[] = [];
-
-  ngOnInit(): void {
-    this.testSrv.getListOfFlights().subscribe((res) => {
-      this.dataSource = res;
-      console.log(res);
-    });
-  }
 }
