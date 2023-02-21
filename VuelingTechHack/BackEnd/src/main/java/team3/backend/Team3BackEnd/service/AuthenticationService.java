@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 import team3.backend.Team3BackEnd.model.in.Role;
 import team3.backend.Team3BackEnd.model.in.User;
 import team3.backend.Team3BackEnd.model.out.AuthenticationResponse;
+import team3.backend.Team3BackEnd.model.out.LoginDto;
 import team3.backend.Team3BackEnd.model.out.RegisterDto;
 import team3.backend.Team3BackEnd.repository.UserRepository;
-import team3.backend.Team3BackEnd.model.out.LoginDto;
 
 //fa la logica de el registre i l'autentificació
 @Service

@@ -1,6 +1,7 @@
 package team3.backend.Team3BackEnd.model.in;
 public enum HandlingFunction {
-    JARDINERA,
+
+    COORDINADOR,
     EQUIPAJES,
-     COORDINADOR
+    JARDINERA
 }

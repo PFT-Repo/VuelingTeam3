@@ -7,9 +7,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-public class OperationDto {
 
-	//private Date day;
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class OperationDto {
+	
 	private String date;
 	private LocalTime hour;
 	private String handlingFuntion;
