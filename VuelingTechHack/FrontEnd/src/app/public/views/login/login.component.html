@@ -29,7 +29,7 @@
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
       <input
-      id="email"
+        id="email"
         type="email"
         matInput
         [formControl]="emailFormControl"
@@ -52,7 +52,7 @@
     <mat-form-field class="example-full-width">
       <mat-label>Password</mat-label>
       <input
-      id="password"
+        id="password"
         type="password"
         matInput
         (ngModel)="(user.password)"
@@ -73,8 +73,6 @@
       </mat-error>
     </mat-form-field>
 
-    <button type="submit" mat-flat-button color="accent" (click)="validate()">
-      Sign-In
-    </button>
+    <button mat-flat-button color="accent" (click)="validate()">Sign-In</button>
   </form>
 </div>
