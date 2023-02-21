@@ -1,0 +1,12 @@
+[
+  {
+    "request": {
+      "url": "^/products/list",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "file": "./products/list.json"
+    }
+  }
+]
