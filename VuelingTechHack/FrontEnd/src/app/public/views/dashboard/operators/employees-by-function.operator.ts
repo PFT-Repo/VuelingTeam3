@@ -12,7 +12,7 @@ export const EmployeesByFunctionOperator = (
           acc[flight.handlingFuntion] = 0;
         }
 
-        acc[flight.handlingFuntion]++;
+        acc[flight.handlingFuntion] += flight.totalEmployees;
         return acc;
       }, {});
 
