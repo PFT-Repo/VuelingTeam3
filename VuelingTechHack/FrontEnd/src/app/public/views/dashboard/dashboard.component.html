@@ -1,9 +1,13 @@
+<div class="charts">
+  <div class="charts_employees">
+    <app-employees-by-function
+      [data]="employeesByFunction"
+    ></app-employees-by-function>
+  </div>
 
-<div class="container">
-  <div class="row">
-    <h1 class="text-center py-4">Lista de vuelos</h1>
-    <div class="col-10">
-      <app-table></app-table>
-    </div>
+  <div class="charts_employees">
+    <app-employees-by-function
+      [data]="[1, 2, 3, 4, 5, 6]"
+    ></app-employees-by-function>
   </div>
 </div>
