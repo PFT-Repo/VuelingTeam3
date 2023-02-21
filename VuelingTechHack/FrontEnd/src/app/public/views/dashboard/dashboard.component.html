@@ -1,2 +1,13 @@
-<p>dashboard Client works!</p>
-<app-table></app-table>
+<div class="charts">
+  <div class="charts_employees">
+    <app-employees-by-function
+      [data]="employeesByFunction"
+    ></app-employees-by-function>
+  </div>
+
+  <div class="charts_employees">
+    <app-employees-by-function
+      [data]="[1, 2, 3, 4, 5, 6]"
+    ></app-employees-by-function>
+  </div>
+</div>
