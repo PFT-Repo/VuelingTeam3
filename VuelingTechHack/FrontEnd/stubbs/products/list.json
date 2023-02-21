@@ -1,10 +1,35 @@
 [
   {
-    "name": "product1",
-    "price": 25
+    "day": "2023/02/02",
+    "hour": "6",
+    "handlingFuntion": "Jardinera",
+    "ftEmployees": "4",
+    "ptEmployees": "7",
+    "totalEmployees": "11",
+    "ftEmployeesCost": "200",
+    "ptEmployeesCost": "600",
+    "totalCost": "1200"
   },
   {
-    "name": "product2",
-    "price": 20
+    "day": "2023/02/02",
+    "hour": "7",
+    "handlingFuntion": "Equipaje",
+    "ftEmployees": "2",
+    "ptEmployees": "6",
+    "totalEmployees": "8",
+    "ftEmployeesCost": "200",
+    "ptEmployeesCost": "600",
+    "totalCost": "1200"
+  },
+  {
+    "day": "2023/02/02",
+    "hour": "8",
+    "handlingFuntion": "Coordinación",
+    "ftEmployees": "1",
+    "ptEmployees": "3",
+    "totalEmployees": "4",
+    "ftEmployeesCost": "200",
+    "ptEmployeesCost": "600",
+    "totalCost": "1200"
   }
 ]

@@ -1,1 +1,13 @@
-<p>dashboard works!</p>
+<div class="filters">
+  <app-chart-filter></app-chart-filter>
+</div>
+
+<div class="charts">
+  <div class="charts_employees">
+    <app-employees-by-function *ngIf="employeesByFunction$ | async as config"
+      [config]="config"
+    ></app-employees-by-function>
+  </div>
+
+  <div class="charts_employees"></div>
+</div>
