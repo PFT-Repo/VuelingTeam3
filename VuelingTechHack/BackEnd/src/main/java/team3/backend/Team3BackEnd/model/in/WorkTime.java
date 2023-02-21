@@ -1,2 +1,5 @@
-package team3.backend.Team3BackEnd.model.in;public enum WorkTime {
+package team3.backend.Team3BackEnd.model.in;
+public enum WorkTime {
+    FULLTIME,
+    PARTTIME
 }

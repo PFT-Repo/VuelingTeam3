@@ -17,9 +17,6 @@ import java.util.Date;
 @Document(collection = "GroundHandling")
 public class GroundHandlingInput {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
     private Date dt_flight;
     private String cd_flight_number;
     private String cd_airport_dep;
