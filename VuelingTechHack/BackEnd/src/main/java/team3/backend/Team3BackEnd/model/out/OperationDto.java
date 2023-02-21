@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Operation {
+public class OperationDto {
 	
 	private Date day;
 	private LocalTime hour;

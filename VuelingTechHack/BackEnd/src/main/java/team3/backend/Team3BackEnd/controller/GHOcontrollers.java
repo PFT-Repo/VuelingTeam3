@@ -7,21 +7,21 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import team3.backend.Team3BackEnd.model.out.Operation;
-import team3.backend.Team3BackEnd.service.GHOServiceImpl;
+import team3.backend.Team3BackEnd.model.out.OperationDto;
+import team3.backend.Team3BackEnd.service.GHOService;
 
 @RestController("/vueling/team3")
 @CrossOrigin(origins = "http://localhost:4500")
-public interface GHOcontrollers {
+public class GHOcontrollers {
 	
 
 	@Autowired
-	GHOServiceImpl ghoService;
+	GHOService ghoService;
 	
 	@GetMapping("/getData")
-	public List<Operation> getOperations(){
+	public List<OperationDto> getOperations(){
 		
-		List<Operation> operations=ghoService.getOperations();
+		List<OperationDto> operations=ghoService.getOperations();
 		
 		
 		return operations;

@@ -2,9 +2,18 @@ package team3.backend.Team3BackEnd.service;
 
 import java.util.List;
 
-import team3.backend.Team3BackEnd.model.out.Operation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public interface GHOService {
+import team3.backend.Team3BackEnd.model.out.OperationDto;
 
-	List<Operation> getOperations();
+@Service
+public class GHOService{
+	
+
+	public List<OperationDto> getOperations() {
+		
+		return null;
+	}
+
 }
