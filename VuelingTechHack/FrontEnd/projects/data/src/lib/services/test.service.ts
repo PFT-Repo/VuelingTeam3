@@ -7,13 +7,9 @@ import { ListOfFLights } from 'src/app/interfaces/listOfFlights.interface';
   providedIn: 'root',
 })
 export class TestService {
-  constructor(
-    private http: HttpClient
-  ) {}
+  constructor(private http: HttpClient) {}
 
-  getListOfFlights(){
-    return this.http.get<ListOfFLights[]>(environment.apiUrl)
+  getListOfFlights() {
+    return this.http.get<ListOfFLights[]>(environment.apiUrl);
   }
-
-  
 }
