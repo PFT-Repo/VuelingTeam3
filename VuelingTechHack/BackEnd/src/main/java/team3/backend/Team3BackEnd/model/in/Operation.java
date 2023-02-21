@@ -3,8 +3,6 @@ package team3.backend.Team3BackEnd.model.in;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -12,6 +10,9 @@ import java.util.Date;
 @ToString
 @Document(collection = "Operation")
 public class Operation {
-    private Date date;
+    private String date;
+    private int hour;
+    private int required_employees;
+    private HandlingFunction handlingFunction;
 
 }
