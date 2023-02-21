@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
-  {path:'/',component: LoginComponent},
+  {path:'login',component: LoginComponent}, {
+    path:' ', redirectTo:'login',pathMatch:'full'
+  },
   {
-    path:'**', redirectTo:'/',pathMatch:'full'
+    path:'**', redirectTo:'login',pathMatch:'full'
   }
 ];
 
