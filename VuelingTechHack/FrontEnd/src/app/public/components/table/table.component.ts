@@ -12,15 +12,10 @@ export interface PeriodicElement {
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  styleUrls: ['./table.component.scss'],
 })
 export class TableComponent {
-
-  constructor(
-    private testSrv: TestService
-  ){
-
-  }
+  constructor(private testSrv: TestService) {}
 
   displayedColumns: string[] = [
     'day',
@@ -36,16 +31,9 @@ export class TableComponent {
   dataSource: ListOfFLights[] = [];
 
   ngOnInit(): void {
-    
-    this.testSrv.getListOfFlights().subscribe(res => {
-      this.dataSource = res
+    this.testSrv.getListOfFlights().subscribe((res) => {
+      this.dataSource = res;
       console.log(res);
-      
-    })
-    
+    });
   }
-
-
-
-
 }
