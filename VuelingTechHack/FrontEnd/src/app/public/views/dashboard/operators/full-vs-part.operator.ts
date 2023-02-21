@@ -29,7 +29,7 @@ export const FullVsPartOperator = (
       );
 
       return {
-        title: 'Empleados en Jornada Completa/Parcial ',
+        title: 'Empleados en Jornada Completa/Parcial',
         full: totals['full'],
         part: totals['part'],
       };
