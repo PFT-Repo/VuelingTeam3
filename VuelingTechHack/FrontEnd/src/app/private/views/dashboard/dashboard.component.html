@@ -1,36 +1,53 @@
-<div class="wrapper" style="width: 100%; height: 100dvh;display: flex; flex-direction: column; align-items: center; justify-content: center;">
-
-
-    <mat-accordion class="example-headers-align">
-        <mat-expansion-panel expanded="true">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-                <h3> Cost per Hours</h3>
-            </mat-panel-title>
-            <mat-panel-description>
-              Modify de actual cost per hour of workers;
-              <mat-icon>account_circle</mat-icon>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
+<app-navbar-admin></app-navbar-admin>
+<div
+  class="wrapper"
+  style="
+    width: 100%;
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  "
+>
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel expanded="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h5>Cost per Hours</h5>
+        </mat-panel-title>
+        <mat-panel-description>
+          Modify de actual cost per hour of workers;
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
       <div *ngFor="let category of categories">
-        <h3>{{ category.category}}</h3>
+        <h4>{{ category.category }}</h4>
         <mat-form-field appearance="fill">
-            <mat-label>FullTimeEmployers</mat-label>
-            <input matInput type="number" min="1" value="{{category.full_time}}" step="0.05">
-          </mat-form-field>
-      
-          <mat-form-field appearance="fill">
-            <mat-label>PartTimeEmployers</mat-label>
-            <input matInput type="number" min="1" value="{{category.part_time}}" step="0.05">
-          </mat-form-field>
-      </div>
-          <mat-action-row>
-            <button mat-button color="primary" >Save</button>
-          </mat-action-row>
-        </mat-expansion-panel>
-      
-      </mat-accordion>
-      
-</div>
+          <mat-label>FullTimeEmployers</mat-label>
+          <input
+            matInput
+            type="number"
+            min="1"
+            value="{{ category.full_time }}"
+            step="0.05"
+          />
+        </mat-form-field>
 
-<p>dashboard works!</p>
+        <mat-form-field appearance="fill">
+          <mat-label>PartTimeEmployers</mat-label>
+          <input
+            matInput
+            type="number"
+            min="1"
+            value="{{ category.part_time }}"
+            step="0.05"
+          />
+        </mat-form-field>
+      </div>
+      <mat-action-row>
+        <button mat-button color="primary">Save</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
