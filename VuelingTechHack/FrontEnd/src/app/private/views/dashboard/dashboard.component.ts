@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,4 +24,11 @@ export class DashboardComponent {
       part_time: 8.5,
     },
   ];
+
+  show(){
+    Swal.fire({
+      icon:'success',
+      title: 'Cambios Enviados',
+    })
+  }
 }
